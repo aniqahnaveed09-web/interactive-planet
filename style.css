@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #f4f6f9;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #222;
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6, .box7 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+
+.card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8,
+.card9, .card10, .card11, .card12, .card13, .card14 {
+    flex: 1 1 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card1:hover, .card2:hover, .card3:hover, .card4:hover,
+.card5:hover, .card6:hover, .card7:hover, .card8:hover,
+.card9:hover, .card10:hover, .card11:hover, .card12:hover,
+.card13:hover, .card14:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(133, 70, 70, 0.18);
+}
+
+
+.card1 img, .card2 img, .card3 img, .card4 img,
+.card5 img, .card6 img, .card7 img, .card8 img,
+.card9 img, .card10 img, .card11 img, .card12 img,
+.card13 img, .card14 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card1 h1, .card2 h1, .card3 h1, .card4 h1,
+.card5 h1, .card6 h1, .card7 h1, .card8 h1,
+.card9 h1, .card10 h1, .card11 h1, .card12 h1,
+.card13 h1, .card14 h1 {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.card1 button, .card2 button, .card3 button, .card4 button,
+.card5 button, .card6 button, .card7 button, .card8 button,
+.card9 button, .card10 button, .card11 button, .card12 button,
+.card13 button, .card14 button {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: #0077ff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card1 button:hover, .card2 button:hover, .card3 button:hover,
+.card4 button:hover, .card5 button:hover, .card6 button:hover,
+.card7 button:hover, .card8 button:hover, .card9 button:hover,
+.card10 button:hover, .card11 button:hover, .card12 button:hover,
+.card13 button:hover, .card14 button:hover {
+    background: #005ecb;
+}
+
+
+
+.planet-info {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.planet-info.filled {
+    display: flex;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.planet-info img {
+    flex: 0 0 260px;
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.planet-info h2 {
+    font-size: 1.6rem;
+    color: #222;
+    margin-bottom: 0.75rem;
+}
+
+.planet-info p {
+    color: #444;
+    line-height: 1.7;
+}
+
+/* ===== Responsive ===== */
+
+/* Large screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+/* Laptops / small desktops */
+@media (max-width: 992px) {
+    .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8,
+    .card9, .card10, .card11, .card12, .card13, .card14 {
+        flex: 1 1 260px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8,
+    .card9, .card10, .card11, .card12, .card13, .card14 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem 0.75rem;
+    }
+
+    .card1, .card2, .card3, .card4, .card5, .card6, .card7, .card8,
+    .card9, .card10, .card11, .card12, .card13, .card14 {
+        padding: 1rem;
+    }
+
+    .card1 img, .card2 img, .card3 img, .card4 img,
+    .card5 img, .card6 img, .card7 img, .card8 img,
+    .card9 img, .card10 img, .card11 img, .card12 img,
+    .card13 img, .card14 img {
+        height: 160px;
+    }
+
+    .card1 h1, .card2 h1, .card3 h1, .card4 h1,
+    .card5 h1, .card6 h1, .card7 h1, .card8 h1,
+    .card9 h1, .card10 h1, .card11 h1, .card12 h1,
+    .card13 h1, .card14 h1 {
+        font-size: 1.2rem;
+    }
+}
